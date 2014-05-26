@@ -1,17 +1,13 @@
 ﻿using Common.Enums;
 using Common.Interfaces;
 using DataAccess;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Model
 {
     internal class Supplier : Party, ISupplier
     {
-        #region Public Properties/Methods
+        #region Public Properties
         public SupplierType Type
         {
             get { return _supplierEntity.Type; }
@@ -53,10 +49,11 @@ namespace Domain.Model
         #region Internal Methods
         internal Supplier(string name, string note, SupplierType type, IDataAccessFacade dataAccessFacade)
         {
+            //Calls validation on "name" for securing right input.
             validateName(name);
-
             this.dataAccessFacade = dataAccessFacade;
             _supplierEntity = dataAccessFacade.CreateSupplier(name, note, type);
+            //Calls party class to put supplierentity as a party. 
             initializeParty(_supplierEntity);
         }
 
@@ -67,18 +64,9 @@ namespace Domain.Model
             initializeParty(_supplierEntity);
         }
 
-        internal void Update()
-        {
-            dataAccessFacade.UpdateSupplier(_supplierEntity);
-        }
-
-        internal void Delete()
-        {
-            dataAccessFacade.DeleteSupplier(_supplierEntity);
-        }
-
         internal static List<Supplier> ReadAll(IDataAccessFacade dataAccessFacade)
         {
+            //Takes all the objects that read and changes them to a supplier from an entity.
             List<ISupplier> supplierEntities = dataAccessFacade.ReadAllSuppliers();
             List<Supplier> suppliers = new List<Supplier>();
 
@@ -89,9 +77,23 @@ namespace Domain.Model
             }
             return suppliers;
         }
+
+        internal void Update()
+        {
+            //Calls update in the dataAccessFacade
+            dataAccessFacade.UpdateSupplier(_supplierEntity);
+        }
+
+        internal void Delete()
+        {
+            //Calls delete in the dataAccessFacade
+            dataAccessFacade.DeleteSupplier(_supplierEntity);
+        }
         #endregion
 
+        #region Private Fields
         private IDataAccessFacade dataAccessFacade;
         private ISupplier _supplierEntity;
+        #endregion
     }
 }

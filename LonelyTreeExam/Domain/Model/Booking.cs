@@ -2,15 +2,13 @@
 using Common.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataAccess;
 
 namespace Domain.Model
 {
     internal class Booking : AAccountability, IBooking
     {
+        #region Public Properties
         public string Sale
         {
             get { return _bookingEntity.Sale; }
@@ -76,16 +74,16 @@ namespace Domain.Model
             get { return _bookingEntity.TransferAmount; }
             set { _bookingEntity.TransferAmount = value; }
         }
+#endregion
 
+        #region Internal Constructor
         internal Booking(IBooking bookingEntity, IDataAccessFacade dataAccessFacade)
         {
             this.dataAccessFacade = dataAccessFacade;
             _bookingEntity = bookingEntity;
-
             // Create Models of responsible and commissioner
             Party responsible = new Party(_bookingEntity.Responsible);
             Party commissioner = new Party(_bookingEntity.Commissioner);
-
             initializeAccountability(_bookingEntity, responsible, commissioner);
         }
 
@@ -95,15 +93,17 @@ namespace Domain.Model
             // Get entities for DataAccess
             IParty responsibleEntity = ((Party)responsible)._partyEntity;
             IParty commissionerEntity = ((Party)commissioner)._partyEntity;
-
             this.dataAccessFacade = dataAccessFacade;
             _bookingEntity = dataAccessFacade.CreateBooking(responsibleEntity, commissionerEntity, sale,
                 bookingNumber,startDate, endDate);
             initializeAccountability(_bookingEntity, responsible, commissioner);
         }
+        #endregion
 
+        #region Internal Methods
         internal static List<Booking> ReadAll(IDataAccessFacade dataAccessFacade)
         {
+            //Calls readall bookings and adds them to a list
             List<IBooking> bookingEntities = dataAccessFacade.ReadAllBookings();
             List<Booking> bookings = new List<Booking>();
 
@@ -117,13 +117,16 @@ namespace Domain.Model
 
         internal void Update()
         {
+            //Calls dataAccessFacade update method for updating a booking
             dataAccessFacade.UpdateBooking(_bookingEntity);
         }
 
         internal void Delete()
         {
+            //Calls dataAccessFacade delete method for removing a booking from the list
             dataAccessFacade.DeleteBooking(_bookingEntity);
         }
+        #endregion
 
         #region Private fields
         private IBooking _bookingEntity;
