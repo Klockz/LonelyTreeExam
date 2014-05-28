@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using Common.Interfaces;
 using DataAccess.Entities;
+using DataAccess.Helpers;
 using DataAccess.Mappers;
 using Common.Enums;
 
@@ -19,15 +21,12 @@ namespace DataAccess
         {
             if (!test)
             {
-                //take the database information from a textfile.
-                connectionString = File.ReadAllText("C:\\ConnectString.txt");
+                    connectionString = 
+                        @"Server=LOCALHOST\LOCALHOST;Initial Catalog=Friendly_TOM;Integrated Security=true";
             }
-            else
-            {
-                connectionString = 
-                    @"Data Source=localhost\SQLEXPRESS;Initial Catalog=LTTEST;Integrated Security=True";
-            }
-
+            Database database = new Database();
+            database.CreateDatabase(connectionString);
+            
             //Creates a new instance of the mappers with the connection information
             paymentMapper = new PaymentMapper(connectionString);
             customerMapper = new CustomerMapper(connectionString);
@@ -227,7 +226,7 @@ namespace DataAccess
             paymentRuleMapper.Delete((PaymentRuleEntity)paymentRuleEntity);
         }
         #endregion
-
+        
         #region Private Properties
         private string connectionString;
         private PaymentMapper paymentMapper;

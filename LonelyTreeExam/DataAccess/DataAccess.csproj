@@ -48,6 +48,7 @@
     <Compile Include="Entities\PaymentEntity.cs" />
     <Compile Include="Entities\PaymentRuleEntity.cs" />
     <Compile Include="Entities\SupplierEntity.cs" />
+    <Compile Include="Helpers\Database.cs" />
     <Compile Include="Helpers\StoredProcedures.cs" />
     <Compile Include="IDataAccessFacade.cs" />
     <Compile Include="Mappers\ASQLMapper.cs" />
@@ -64,6 +65,10 @@
       <Project>{dc8ef77f-9bfc-4d77-950d-ab7d6f2bcfdc}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helpers\script.sql" />
+    <Content Include="Helpers\Script.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
