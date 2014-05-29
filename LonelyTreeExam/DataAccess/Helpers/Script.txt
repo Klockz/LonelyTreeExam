@@ -1,4 +1,3 @@
-USE [master]
 GO
 /****** Object:  Database [Friendly_TOM]    Script Date: 28-05-2014 11:46:17 ******/
 CREATE DATABASE [Friendly_TOM]
@@ -7,77 +6,44 @@ CREATE DATABASE [Friendly_TOM]
 ( NAME = N'Friendly_TOM', FILENAME = N'C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.LOCALHOST\MSSQL\DATA\Friendly_TOM.mdf' , SIZE = 4288KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'Friendly_TOM_log', FILENAME = N'C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.LOCALHOST\MSSQL\DATA\Friendly_TOM_log.ldf' , SIZE = 1072KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
-GO
 ALTER DATABASE [Friendly_TOM] SET COMPATIBILITY_LEVEL = 110
-GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
 EXEC [Friendly_TOM].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
 ALTER DATABASE [Friendly_TOM] SET ANSI_NULL_DEFAULT OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET ANSI_NULLS OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET ANSI_PADDING OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET ANSI_WARNINGS OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET ARITHABORT OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET AUTO_CLOSE OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET AUTO_SHRINK OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET AUTO_UPDATE_STATISTICS ON 
-GO
 ALTER DATABASE [Friendly_TOM] SET CURSOR_CLOSE_ON_COMMIT OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET CURSOR_DEFAULT  GLOBAL 
-GO
 ALTER DATABASE [Friendly_TOM] SET CONCAT_NULL_YIELDS_NULL OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET NUMERIC_ROUNDABORT OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET QUOTED_IDENTIFIER OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET RECURSIVE_TRIGGERS OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET  DISABLE_BROKER 
-GO
 ALTER DATABASE [Friendly_TOM] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET DATE_CORRELATION_OPTIMIZATION OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET TRUSTWORTHY OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET ALLOW_SNAPSHOT_ISOLATION OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET PARAMETERIZATION SIMPLE 
-GO
 ALTER DATABASE [Friendly_TOM] SET READ_COMMITTED_SNAPSHOT OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET HONOR_BROKER_PRIORITY OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET RECOVERY SIMPLE 
-GO
 ALTER DATABASE [Friendly_TOM] SET  MULTI_USER 
-GO
 ALTER DATABASE [Friendly_TOM] SET PAGE_VERIFY CHECKSUM  
-GO
 ALTER DATABASE [Friendly_TOM] SET DB_CHAINING OFF 
-GO
 ALTER DATABASE [Friendly_TOM] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
-GO
 ALTER DATABASE [Friendly_TOM] SET TARGET_RECOVERY_TIME = 0 SECONDS 
-GO
 ALTER DATABASE [Friendly_TOM] SET DELAYED_DURABILITY = DISABLED 
-GO
 USE [Friendly_TOM]
-GO
 /****** Object:  Table [dbo].[Booking]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Booking](
@@ -106,10 +72,8 @@ CREATE TABLE [dbo].[Booking](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[Customer]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Customer](
@@ -126,10 +90,8 @@ CREATE TABLE [dbo].[Customer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[Party]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Party](
@@ -144,10 +106,8 @@ CREATE TABLE [dbo].[Party](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[Payment]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Payment](
@@ -174,10 +134,8 @@ CREATE TABLE [dbo].[Payment](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[PaymentRule]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[PaymentRule](
@@ -197,10 +155,8 @@ CREATE TABLE [dbo].[PaymentRule](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[Supplier]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Supplier](
@@ -217,52 +173,35 @@ CREATE TABLE [dbo].[Supplier](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
 ALTER TABLE [dbo].[Booking]  WITH CHECK ADD  CONSTRAINT [FK_Booking_Customer] FOREIGN KEY([Customer])
 REFERENCES [dbo].[Customer] ([PartyId])
-GO
 ALTER TABLE [dbo].[Booking] CHECK CONSTRAINT [FK_Booking_Customer]
-GO
 ALTER TABLE [dbo].[Booking]  WITH CHECK ADD  CONSTRAINT [FK_Booking_Supplier] FOREIGN KEY([Supplier])
 REFERENCES [dbo].[Supplier] ([PartyId])
-GO
 ALTER TABLE [dbo].[Booking] CHECK CONSTRAINT [FK_Booking_Supplier]
-GO
 ALTER TABLE [dbo].[Customer]  WITH CHECK ADD  CONSTRAINT [FK_Customer_Party] FOREIGN KEY([PartyId])
 REFERENCES [dbo].[Party] ([PartyId])
-GO
 ALTER TABLE [dbo].[Customer] CHECK CONSTRAINT [FK_Customer_Party]
-GO
 ALTER TABLE [dbo].[Payment]  WITH CHECK ADD  CONSTRAINT [FK_Payment_Commissioner] FOREIGN KEY([Payee])
 REFERENCES [dbo].[Party] ([PartyId])
-GO
 ALTER TABLE [dbo].[Payment] CHECK CONSTRAINT [FK_Payment_Commissioner]
-GO
 ALTER TABLE [dbo].[Payment]  WITH CHECK ADD  CONSTRAINT [FK_Payment_Responsible] FOREIGN KEY([Payer])
 REFERENCES [dbo].[Party] ([PartyId])
-GO
 ALTER TABLE [dbo].[Payment] CHECK CONSTRAINT [FK_Payment_Responsible]
-GO
 ALTER TABLE [dbo].[PaymentRule]  WITH CHECK ADD  CONSTRAINT [FK_PaymentRule_Customer] FOREIGN KEY([Customer])
 REFERENCES [dbo].[Customer] ([PartyId])
-GO
 ALTER TABLE [dbo].[PaymentRule] CHECK CONSTRAINT [FK_PaymentRule_Customer]
-GO
 ALTER TABLE [dbo].[PaymentRule]  WITH CHECK ADD  CONSTRAINT [FK_PaymentRule_Supplier] FOREIGN KEY([Supplier])
 REFERENCES [dbo].[Supplier] ([PartyId])
-GO
 ALTER TABLE [dbo].[PaymentRule] CHECK CONSTRAINT [FK_PaymentRule_Supplier]
-GO
 ALTER TABLE [dbo].[Supplier]  WITH CHECK ADD  CONSTRAINT [FK_Supplier_Party] FOREIGN KEY([PartyId])
 REFERENCES [dbo].[Party] ([PartyId])
-GO
 ALTER TABLE [dbo].[Supplier] CHECK CONSTRAINT [FK_Supplier_Party]
-GO
 /****** Object:  StoredProcedure [dbo].[InsertBooking]    Script Date: 28-05-2014 11:46:17 ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
+
+Go
 CREATE PROCEDURE [dbo].[InsertBooking]
 @Supplier int,
 @Customer int,
@@ -288,7 +227,7 @@ as
 BEGIN
 	SET @LastModified = CURRENT_TIMESTAMP
 	    -- Insert statements for procedure here
-	INSERT INTO peips_dk_db.dbo.Booking(Supplier, Customer, Note, Sale, BookingNumber, StartDate, EndDate, Type,
+	INSERT INTO Friendly_TOM.dbo.Booking(Supplier, Customer, Note, Sale, BookingNumber, StartDate, EndDate, Type,
 	IVAExempt, IVASubject, Subtotal, Service, IVA, ProductRetention, SupplierRetention, TransferAmount, Deleted, LastModified)
 	VALUES (@Supplier, @Customer, @Note, @Sale, @BookingNumber, @StartDate, @EndDate, @Type, @IVAExempt, @IVASubject, @Subtotal,
 	@Service, @IVA, @ProductRetention, @SupplierRetention, @TransferAmount, @Deleted, @LastModified)
@@ -299,10 +238,7 @@ END
 
 GO
 /****** Object:  StoredProcedure [dbo].[InsertCustomer]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -340,15 +276,14 @@ BEGIN
 		(Type, PartyId, ContactPerson, Email, Address, PhoneNo, FaxNo)
 	VALUES
 		(@Type, @Id, @ContactPerson, @Email, @Address, @PhoneNo, @FaxNo)
+
+		SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[InsertPayment]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -387,15 +322,13 @@ BEGIN
 	VALUES (@DueDate, @DueAmount, @Paid, @PaidDate, @PaidAmount, @Attachments, @Archived, @Payee,
 	 @Payer, @Note, @Type, @Sale, @Booking, @Invoice, @Deleted, @LastModified)
 	SET @Id = @@identity
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[InsertPaymentRule]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 CREATE PROCEDURE [dbo].[InsertPaymentRule]
 	-- Add the parameters for the stored procedure here
 	@Supplier int,
@@ -419,15 +352,14 @@ BEGIN
 	INSERT INTO dbo.PaymentRule (Supplier, Customer, BookingType, Percentage, DaysOffset, BaseDate, PaymentType, Deleted, LastModified)
 	VALUES (@Supplier, @Customer, @BookingType, @Percentage, @DaysOffset, @BaseDate, @PaymentType, @Deleted, @LastModified)
 	SET @Id = @@IDENTITY
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[InsertSupplier]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -467,27 +399,25 @@ BEGIN
 	VALUES
 		(@Type, @Id, @AccountNo, @AccountName, @OwnerId
 		, @Bank, @AccountType)
+		SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[ReadAllBookings]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 create procedure [dbo].[ReadAllBookings]
 as
 begin
 select * from Friendly_TOM.dbo.Booking
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 end
 
 GO
 /****** Object:  StoredProcedure [dbo].[ReadAllCustomers]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -508,15 +438,14 @@ BEGIN
 	FROM Friendly_TOM.dbo.Customer
 	INNER JOIN Friendly_TOM.dbo.Party
 	ON Customer.PartyId = Party.PartyId
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[ReadAllPaymentRules]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 CREATE PROCEDURE [dbo].[ReadAllPaymentRules]
 	-- Add the parameters for the stored procedure here	
 AS
@@ -527,15 +456,14 @@ BEGIN
 
     -- Insert statements for procedure here
 	SELECT * FROM dbo.PaymentRule
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[ReadAllPayments]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -552,15 +480,14 @@ BEGIN
 
     -- Insert statements for procedure here
 	SELECT * from Friendly_TOM.dbo.Payment
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[ReadAllSuppliers]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -581,15 +508,14 @@ BEGIN
 	FROM Friendly_TOM.dbo.Supplier
 	INNER JOIN Friendly_TOM.dbo.Party
 	ON Supplier.PartyId = Party.PartyId
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[UpdateBooking]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -644,16 +570,14 @@ BEGIN
 	 Deleted = @Deleted,
 	 LastModified = @LastModified	 
 	 WHERE BookingId=@Id
-
+	 SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[UpdateCustomer]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -698,15 +622,14 @@ BEGIN
 		Deleted = @Deleted
 	WHERE
 		PartyId = @Id
+		SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[UpdatePayment]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -759,15 +682,14 @@ BEGIN
 	 LastModified=@LastModified, 
 	 Deleted=@Deleted
 	 WHERE PaymentId=@Id
+	 SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[UpdatePaymentRule]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 CREATE PROCEDURE [dbo].[UpdatePaymentRule]
 	-- Add the parameters for the stored procedure here
 	@Supplier int,
@@ -800,15 +722,14 @@ BEGIN
 	Deleted = @Deleted,
 	LastModified = @LastModified
 	WHERE PaymentRuleId = @Id
+	SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 /****** Object:  StoredProcedure [dbo].[UpdateSupplier]    Script Date: 28-05-2014 11:46:17 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 -- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
@@ -853,11 +774,12 @@ BEGIN
 		Deleted = @Deleted
 	WHERE
 		PartyId = @Id
+		SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 END
 
 
 GO
 USE [master]
-GO
 ALTER DATABASE [Friendly_TOM] SET  READ_WRITE 
-GO
+
