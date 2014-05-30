@@ -67,7 +67,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Helpers\script.sql" />
     <EmbeddedResource Include="Helpers\Script.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
