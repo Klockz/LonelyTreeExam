@@ -21,8 +21,9 @@ namespace DataAccess
         {
             if (!test)
             {
-                    connectionString = 
-                        @"Server=LOCALHOST\LOCALHOST;Initial Catalog=Friendly_TOM;Integrated Security=true";
+                connectionString = @"Server = mssql4.unoeuro.com; Database = peips_dk_db; Uid = peips_dk; Pwd = smutmeddig1";
+                //File.ReadAllText("C:\\ConnectString.txt");
+                //@"Server=LOCALHOST\LOCALHOST;Initial Catalog=Friendly_TOM;Integrated Security=true";
             }
             Database database = new Database();
             database.CreateDatabase(connectionString);

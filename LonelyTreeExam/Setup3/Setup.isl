@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject>Setup</subject>
+		<subject>Friendly T.O.M</subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -339,11 +339,11 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Common.Primary_output</td><td>{5740C4B5-27B0-499E-9733-E24C133E17B1}</td><td>INSTALLDIR</td><td>2</td><td/><td>common.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DataAccess.Primary_output</td><td>{8A63DF5B-7363-4474-8863-3543434863F9}</td><td>INSTALLDIR</td><td>2</td><td/><td>dataaccess.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Domain.Primary_output</td><td>{79698DF7-9B7B-4C1B-955B-E510C3D907D7}</td><td>INSTALLDIR</td><td>2</td><td/><td>domain.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LonelyTreeExam.Primary_output</td><td>{9FC73E27-0C3F-4041-96C7-358C39EA01FF}</td><td>INSTALLDIR</td><td>2</td><td/><td>lonelytreeexam.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>UnitTestProject.Primary_output</td><td>{18BF372B-C5E3-4CD3-B676-557C522469D5}</td><td>INSTALLDIR</td><td>2</td><td/><td>unittestproject.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Common.Primary_output</td><td>{AD1C9D39-A2EA-4A99-8CF5-3744877B56DE}</td><td>INSTALLDIR</td><td>2</td><td/><td>common.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DataAccess.Primary_output</td><td>{86BD57E4-7848-4E0B-B20E-83E0A92816B6}</td><td>INSTALLDIR</td><td>2</td><td/><td>dataaccess.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Domain.Primary_output</td><td>{F13A8FA2-827E-46D6-A293-4076319145D8}</td><td>INSTALLDIR</td><td>2</td><td/><td>domain.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LonelyTreeExam.Primary_output</td><td>{F35A635B-91C4-4559-9BDF-E6F288E90C85}</td><td>INSTALLDIR</td><td>2</td><td/><td>lonelytreeexam.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>UnitTestProject.Primary_output</td><td>{1A77E221-7436-47E7-9549-EF0EBFA0DACE}</td><td>INSTALLDIR</td><td>2</td><td/><td>unittestproject.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1138,10 +1138,11 @@
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
+		<row><td>FRIENDLY_T.O.M</td><td>ROCK_SCISSORS_LIZARD_SPOCK</td><td>FRIEND~1|Friendly T.O.M</td><td/><td>0</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>SETUP</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>FRIENDLY_T.O.M</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -1156,9 +1157,11 @@
 		<row><td>ProgramFiles64Folder</td><td>TARGETDIR</td><td>.:Prog64~1|Program Files 64</td><td/><td>0</td><td/></row>
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
+		<row><td>ROCK_SCISSORS_LIZARD_SPOCK</td><td>ProgramFilesFolder</td><td>ROCKSC~1|Rock Scissors Lizard Spock</td><td/><td>0</td><td/></row>
 		<row><td>ROCK__SCISSORS__LIZARD__SPOCK</td><td>ProgramFilesFolder</td><td>ROCK_S~1|Rock, Scissors, Lizard, Spock</td><td/><td>0</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
 		<row><td>SETUP</td><td>ROCK__SCISSORS__LIZARD__SPOCK</td><td>Setup</td><td/><td>0</td><td/></row>
+		<row><td>SETUP1</td><td>ROCK_SCISSORS_LIZARD_SPOCK</td><td>Setup</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
 		<row><td>StartupFolder</td><td>TARGETDIR</td><td>.:StartUp</td><td/><td>3</td><td/></row>
@@ -1171,8 +1174,8 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>rock_s_1_rock__scissors__lizard__spock</td><td>ProgramMenuFolder</td><td>ROCK_S~1|Rock, Scissors, Lizard, Spock</td><td/><td>1</td><td/></row>
-		<row><td>setup</td><td>rock_s_1_rock__scissors__lizard__spock</td><td>Setup</td><td/><td>1</td><td/></row>
+		<row><td>friend_1.m_friendly_t.o.m</td><td>rocksc_1_rock_scissors_lizard_spock</td><td>FRIEND~1.M|Friendly T.O.M</td><td/><td>1</td><td/></row>
+		<row><td>rocksc_1_rock_scissors_lizard_spock</td><td>ProgramMenuFolder</td><td>ROCKSC~1|Rock Scissors Lizard Spock</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -2032,11 +2035,11 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Common.Primary_output</td><td/><td/><td>_ADA6F044_D894_4EAA_88C1_DE11FA4594C5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DataAccess.Primary_output</td><td/><td/><td>_D305F0E5_D5F5_4C9A_8FFB_FD1198300D84_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Domain.Primary_output</td><td/><td/><td>_5FE45B7D_D019_4D46_9875_26BA135C5C72_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LonelyTreeExam.Primary_output</td><td/><td/><td>_6EB1012F_A69D_473A_8548_B49BB3F4C21E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>UnitTestProject.Primary_output</td><td/><td/><td>_D5902593_8CCD_45FA_928D_8E37EB2BA335_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Common.Primary_output</td><td/><td/><td>_B1F50D41_C229_44A4_848B_75C745085921_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DataAccess.Primary_output</td><td/><td/><td>_04152520_D615_40E4_8C4A_A5C4C6D98A94_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Domain.Primary_output</td><td/><td/><td>_FC5290A0_D032_43DA_A220_B4B1FDEF9C92_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LonelyTreeExam.Primary_output</td><td/><td/><td>_9F4B3AEF_A921_45CA_90AC_51FF4E695322_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>UnitTestProject.Primary_output</td><td/><td/><td>_D92A2241_55D5_4359_BFC5_37E85A4FCB1B_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2658,7 +2661,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Rock, Scissors, Lizard, Spock</td><td>0</td><td/><td>-626905292</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>Rock Scissors Lizard Spock</td><td>0</td><td/><td>321055497</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-626907340</td></row>
@@ -3472,6 +3475,8 @@
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>T.O.M</td><td>0</td><td/><td>-626888650</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>T.O.M</td><td>0</td><td/><td>186817358</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>321045353</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Friendly T.O.M</td><td>0</td><td/><td>321053577</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-626907340</td></row>
@@ -3760,8 +3765,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-626907340</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-626907340</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.peips.dk</td><td>0</td><td/><td>-626905228</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>Rock, Scissors, Lizard, Spock</td><td>0</td><td/><td>-626905292</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.RockScissorsLizardSpock.com</td><td>0</td><td/><td>321055497</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>Rock Scissors Lizard Spock</td><td>0</td><td/><td>321055497</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-626907340</td></row>
 	</table>
 
@@ -3871,6 +3876,7 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>_Built_774D538D979D4439B066A6407A68CE29.exe</td><td/><td>C:\Users\Spaak\Downloads\1401643773_196742.ico</td><td>0</td></row>
+		<row><td>_Built_E10C61AD077F4A36B62B1CAD1B9B0FF3.exe</td><td/><td>C:\Users\Spaak\Downloads\1401643773_196742.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4003,7 +4009,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{F204FB23-4061-4020-B20F-C7D02F52C5D0}</td></row>
 		<row><td>ISUSSignature</td><td>{A3746BC8-6D16-4A98-A34E-890834D86186}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewShortcuts,viewRealSetupDesign,viewUI,viewCustomActions</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewShortcuts,viewRealSetupDesign,viewUI,viewCustomActions,viewSQLServer</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4376,7 +4382,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{DB50A7AD-8221-45A8-B9F8-4EF68FEF5032}</td><td/></row>
-		<row><td>ProductName</td><td>Setup</td><td/></row>
+		<row><td>ProductName</td><td>Friendly T.O.M</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
@@ -4452,9 +4458,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>LonelyTreeExam.Primary_output</td><td/><td>rock_s_1_rock__scissors__lizard__spock</td><td>2</td></row>
-		<row><td>FileKey2</td><td>LonelyTreeExam.Primary_output</td><td/><td>setup</td><td>2</td></row>
-		<row><td>_Built</td><td>LonelyTreeExam.Primary_output</td><td/><td>setup</td><td>2</td></row>
+		<row><td>FileKey1</td><td>LonelyTreeExam.Primary_output</td><td/><td>rocksc_1_rock_scissors_lizard_spock</td><td>2</td></row>
+		<row><td>FileKey2</td><td>LonelyTreeExam.Primary_output</td><td/><td>friend_1.m_friendly_t.o.m</td><td>2</td></row>
+		<row><td>_Built</td><td>LonelyTreeExam.Primary_output</td><td/><td>friend_1.m_friendly_t.o.m</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4540,7 +4546,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>_Built</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>LonelyTreeExam.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_774D538D979D4439B066A6407A68CE29.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built</td><td>friend_1.m_friendly_t.o.m</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>LonelyTreeExam.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_E10C61AD077F4A36B62B1CAD1B9B0FF3.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
