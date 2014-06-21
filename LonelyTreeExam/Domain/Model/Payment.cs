@@ -5,6 +5,7 @@ using System.IO;
 using Common.Interfaces;
 using Common.Enums;
 using DataAccess;
+using System.Windows.Forms;
 
 namespace Domain.Model
 {
@@ -112,11 +113,38 @@ namespace Domain.Model
 
         //Adds one attachment with the filepath as a parameter. accesses AddAttachment through
         //the specific paymentEntity, saved in the specific payment.
-        public void AddAttachment(string attachment)
+        public void AddAttachment(string attachmentPath)
         {
             //validate if the filepath exists.
-            validateFilePathExists(attachment);
-            _paymentEntity.AddAttachment(attachment);    
+            validateFilePathExists(attachmentPath);
+
+            string attachmentFolder = "Attachments\\" + Sale + Booking;
+            if (!Directory.Exists(attachmentFolder))
+            {
+                Directory.CreateDirectory(attachmentFolder);
+            }
+
+            string[] attachmentSplit = attachmentPath.Split('\\');
+            string filename = attachmentSplit[attachmentSplit.Length - 1];
+
+            string attachment = attachmentFolder + "\\" + filename;
+
+            if (File.Exists(attachment))
+            {
+                DialogResult dialogResult = MessageBox.Show("The file already exists. Do you want to replace the existing file?",
+                    "Overwrite", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    File.Copy(attachmentPath, attachment, true);
+                    _paymentEntity.AddAttachment(attachment);
+                }
+            }
+            else
+            {
+                File.Copy(attachmentPath, attachment);
+                _paymentEntity.AddAttachment(attachment);
+            }
         }
         #endregion
 
@@ -158,7 +186,6 @@ namespace Domain.Model
                 _payer = new Customer((ICustomer)_paymentEntity.Payer, dataAccessFacade);
                 _payee = new Supplier(dataAccessFacade, (ISupplier)_paymentEntity.Payee);
             }
-
         }
 #endregion
 
